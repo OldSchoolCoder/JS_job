@@ -43,28 +43,55 @@
                     </div>
                     <button type="submit" class="btn btn-warning fw-light">Register</button>
                 </form>
-                <div class="mb-3"></div>
-                <table class="table table-striped">
-                    <thead>
+                <br>
+                <table class="table border-warning table-hover table-striped">
+                    <thead class="table-light">
                         <tr>
-                            <th>Firstname</th>
-                            <th>Email</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">View</th>
+                            <th scope="col">Download</th>
+                            <th scope="col">Delete</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>John</td>
-                            <td>john@example.com</td>
-                        </tr>
-                        <tr>
-                            <td>July</td>
-                            <td>july@example.com</td>
+                            <td>Mark</td>
+                            <td>
+                                <a href="">
+                                    <span style="font-size: 1rem;">
+                                        <span style="color: rgb(206, 203, 14);">
+                                            <i class="fas fa-edit"></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </td>
+                            <td>
+                                View
+                            </td>
+                            <td>
+                                <a href="">
+                                    <span style="font-size: 1rem;">
+                                        <span style="color: rgb(187, 190, 6);">
+                                            <i class="fas fa-spin fa-sync-alt"></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="">
+                                    <span style="font-size: 1rem;">
+                                        <span style="color: rgb(147, 150, 4);">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </span>
+                                    </span>
+                                </a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
     </div>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
