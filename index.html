@@ -16,6 +16,12 @@
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function validate() {
+            alert($('#firstName').attr('title'));
+            return false;
+        }
+    </script>
     <title>Bootstrap Example</title>
 </head>
 
@@ -26,22 +32,22 @@
                 <form action="/dreamjob/auth.do" method="post">
                     <div class="input-group mb-3">
                         <span class="input-group-text fw-light">First and last name</span>
-                        <input type="text" aria-label="First name" class="form-control">
-                        <input type="text" aria-label="Last name" class="form-control">
+                        <input type="text" aria-label="First name" class="form-control" id="firstName">
+                        <input type="text" aria-label="Last name" class="form-control" id="lastName">
                     </div>
                     <div class="mb-3">
                         <select class="form-select border-warning fw-light" aria-label="Default select example">
-                            <option selected>Select gender</option>
+                            <option selected id="gender">Select gender</option>
                             <option value="1">Male</option>
                             <option value="2">Femal</option>
                             <option value="3">Transgender</option>
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Overview</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="overview" class="form-label">Overview</label>
+                        <textarea class="form-control" id="overview" rows="3"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-warning fw-light">Register</button>
+                    <button type="submit" class="btn btn-warning fw-light" onclick="return validate();">Register</button>
                 </form>
                 <br>
                 <table class="table border-warning table-hover table-striped">
