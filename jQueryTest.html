@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+</head>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //Установим размер шрифта всех абзацев равным 20 пикселям
+        $("p").css("fontSize", "20px");
+        //Изменим на зеленый цвет шрифта элемента с id=el2
+        $("#el2").css("color", "green");
+        //Изменим на красный цвет шрифта элемента с class=el3
+        $(".el3").css("color", "red");
+        //Сделаем жирным шрифт элементов с id=el2 и class=el3
+        $("#el2,.el3").css("fontWeight", "bold");
+        //Изменим на синий цвет текста кнопки
+        $(":input").css("color", "blue");
+        //Установим размер шрифта всех элементов имеющих атрибут href равным 20 пикселям
+        $("[href]").css("fontSize", "20px");
+        //Изменим на зеленый цвет ссылки на www.wisdomweb.ru 
+        $("[href='http://www.wisdomweb.ru/']").css("color", "green");
+
+        $('form').find('input, textearea, select').each(function () {
+        //$("form").find('input, textearea, select').each(function () {
+            // добавим новое свойство к объекту $data
+            // имя свойства – значение атрибута name элемента
+            // значение свойства – значение свойство value элемента
+            //$data[this.name] = $(this).val();
+            $(this).css("color", "green");
+        });
+
+        $('form').submit(function(){
+            alert('alertTest');
+        });
+
+
+    });
+</script>
+
+<body>
+    <form>
+        <input type="text">
+        <select>
+            <option selected id="gender">Select gender</option>
+            <option value="1">Male</option>
+            <option value="2">Femal</option>
+            <option value="3">Transgender</option>
+        </select>
+        <textarea id="overview" rows="3"></textarea>
+        <input type="submit"  value="Submit">
+    </form>
+    <p>Я первый элемент.</p>
+    <p id="el2">Я второй элемент.</p>
+    <p class="el3">Я третий элемент.</p>
+    <input type="button" value="Я кнопка" />
+    <br /><br />
+    <a href="http://www.wisdomweb.ru/">wisdomweb.ru</a>
+    <br /><br />
+    <a href="http://www.wisdomweb.ru/HTML/">HTML учебник</a>
+</body>
+
+</html>
