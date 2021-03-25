@@ -56,18 +56,19 @@
             // if ($(this).val == "") {
             //if ($(this).val == '') {
             //if ($(":input").val() != '') {
-            if ($(this).val() == '') { //в любм случае срабатывает
+            if ($(this).val() == '' || $(this).val() == 'Select gender') { //в любм случае срабатывает
                 //alert('spaseTest');
                 alert($(this).attr('type'));
                 console.log($(this).val());
-            }
-            console.log($("select").val());
-            if ($("select").val() == 'Select gender') {
-                alert('SelectTest');
-                //break;
-                //return;
                 return false;
             }
+            //console.log($("select").val());
+            // if ($("select").val() == 'Select gender') {
+            //     alert('SelectTest');
+            //     //break;
+            //     //return;
+            //     return false;
+            // }
         });
         // if ($(":input").val() == '') {
         // //if ($(":input").val() == "") {    
