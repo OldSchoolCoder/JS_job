@@ -50,12 +50,21 @@
     function validate() {
         //alert('alertTest');
         //$(":input").css("color", "red");
-        $('form').find('input, textearea, select').each(function () {            
+        $('form').find('input, textearea, select').each(function () {
             $(this).css("color", "red");
             // if ($(this).val == "") {
-            //     alert('spaseTest');
-            // }
+            //if ($(this).val == '') {
+            if ($(":input").val() == '') {
+                alert('spaseTest');
+            }
         });
+        // if ($(":input").val() == '') {
+        // //if ($(":input").val() == "") {    
+        //     alert('spaseTest');
+        // }
+
+
+
         return false;
     }
 </script>
