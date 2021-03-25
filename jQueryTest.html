@@ -51,7 +51,7 @@
         //alert('alertTest');
         //$(":input").css("color", "red");
         //$('form').find('input, textearea, select').each(function () {
-        $('form').find('input, textarea').each(function () {
+        $('form').find('input, textarea, select').each(function () {
             $(this).css("color", "red");
             // if ($(this).val == "") {
             //if ($(this).val == '') {
@@ -60,6 +60,13 @@
                 //alert('spaseTest');
                 alert($(this).attr('type'));
                 console.log($(this).val());
+            }
+            console.log($("select").val());
+            if ($("select").val() == 'Select gender') {
+                alert('SelectTest');
+                //break;
+                //return;
+                return false;
             }
         });
         // if ($(":input").val() == '') {
