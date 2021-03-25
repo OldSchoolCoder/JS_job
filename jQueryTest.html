@@ -22,20 +22,42 @@
         $("[href='http://www.wisdomweb.ru/']").css("color", "green");
 
         $('form').find('input, textearea, select').each(function () {
-        //$("form").find('input, textearea, select').each(function () {
+            //$("form").find('input, textearea, select').each(function () {
             // добавим новое свойство к объекту $data
             // имя свойства – значение атрибута name элемента
             // значение свойства – значение свойство value элемента
             //$data[this.name] = $(this).val();
             $(this).css("color", "green");
+            if ($(this).val == "") {
+                alert('spaseTest');
+            }
         });
 
-        $('form').submit(function(){
-            alert('alertTest');
-        });
+        //$('form').submit(function(){
+        //alert('alertTest');
+        //});
+
+        //не работает потому что влеженная
+        // function validate() { не работает потому что влеженная
+        //     alert('alertTest');
+        //     return false;
+        // }
 
 
     });
+</script>
+<script>
+    function validate() {
+        //alert('alertTest');
+        //$(":input").css("color", "red");
+        $('form').find('input, textearea, select').each(function () {            
+            $(this).css("color", "red");
+            // if ($(this).val == "") {
+            //     alert('spaseTest');
+            // }
+        });
+        return false;
+    }
 </script>
 
 <body>
@@ -48,7 +70,8 @@
             <option value="3">Transgender</option>
         </select>
         <textarea id="overview" rows="3"></textarea>
-        <input type="submit"  value="Submit">
+        <input type="submit" value="Submit" onclick="return validate();">
+        <!-- <button type="submit" onclick="return validate();">Register</button>-->
     </form>
     <p>Я первый элемент.</p>
     <p id="el2">Я второй элемент.</p>
