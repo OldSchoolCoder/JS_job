@@ -26,6 +26,13 @@
             });
             return false;
         }
+
+        function addRow() {
+            var firstName = $('#FirstName').val();
+            var lastName = $('#LastName').val();
+            var overview = $('#overview').val();
+            $('#table tr:last').after('<tr><td>' + firstName + '</td><td>' + lastName + '</td><td>' + overview + '</td></tr>');
+        }
     </script>
     <title>Bootstrap Example</title>
 </head>
@@ -37,8 +44,8 @@
                 <form action="/dreamjob/auth.do" method="post">
                     <div class="input-group mb-3">
                         <span class="input-group-text fw-light">First and last name</span>
-                        <input type="text" aria-label="First name" class="form-control" id="first name">
-                        <input type="text" aria-label="Last name" class="form-control" id="last name">
+                        <input type="text" aria-label="First name" class="form-control" id="FirstName">
+                        <input type="text" aria-label="Last name" class="form-control" id="LastName">
                     </div>
                     <div class="mb-3">
                         <select id="gender" class="form-select border-warning fw-light"
@@ -57,7 +64,7 @@
                         onclick="return validate();">Register</button>
                 </form>
                 <br>
-                <table class="table border-warning table-hover table-striped">
+                <table id="table" class="table border-warning table-hover table-striped">
                     <thead class="table-light">
                         <tr>
                             <th>Firstname</th>
@@ -83,6 +90,7 @@
                         </tr>
                     </tbody>
                 </table>
+                <button type="reset" onclick="addRow();" class="btn btn-outline-warning btn-sm">Add row</button>
             </div>
         </div>
     </div>
